@@ -1,3 +1,24 @@
-# -Freediamondffgiveaway_bot
-@Freediamondffgiveaway_bot
-@app.route('/{}'.format(1457278085:AAGYyhqjVVPHF4ipzuv4nDQ5qGB4FQrBab8), methods=['POST']) def respond(): # retrieve the message in JSON and then transform it to Telegram object update = telegram.Update.de_json(request.get_json(force=True), bot) chat_id = update.message.chat.id msg_id = update.message.message_id # Telegram understands UTF-8, so encode text for unicode compatibility text = update.message.text.encode('utf-8').decode() # for debugging purposes only print("got text message :", text) # the first time you chat with the bot AKA the welcoming message if text == "/start": # print the welcoming message bot_welcome = """ Welcome to coolAvatar bot, the bot is using the service from http://avatars.adorable.io/ to generate cool looking avatars based on the name you enter so please enter a name and the bot will reply with an avatar for your name. """ # send the welcoming message bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id) else: try: # clear the message we got from any non alphabets text = re.sub(r"\W", "_", text) # create the api link for the avatar based on http://avatars.adorable.io/ url = "https://api.adorable.io/avatars/285/{}.png".format(text.strip()) # reply with a photo to the name the user sent, # note that you can send photos by url and telegram will fetch it for you bot.sendPhoto(chat_id=chat_id, photo=url, reply_to_message_id=msg_id) except Exception: # if things went wrong bot.sendMessage(chat_id=chat_id, text="There was a problem in the name you used, please enter different name", reply_to_message_id=msg_id) return 'ok'
+1. English
+# MergePDF
+-Client-Side PDF MergerA fast, secure, and ads-free tool to merge multiple PDF files directly in your browser.
+Built with ReactJS and fully client-side — no backend, no uploads, no data storage. 100% privacy
+ Drag & drop support
+ Instant merging
+ Mobile-friendly UI  Live Tool: https://devlogic.store/mergepdf
+ 
+ 2. हिंदी (Hindi)
+# MergePDF
+— क्लाइंट-साइड PDF मर्जरएक तेज, सुरक्षित और विज्ञापन-रहित उपकरण जो आपके ब्राउज़र में सीधे कई PDF फाइलों को मर्ज करता है।
+ReactJS के साथ बनाया गया और पूरी तरह से क्लाइंट-साइड — कोई बैकएंड नहीं, कोई अपलोड नहीं, कोई डेटा स्टोरेज नहीं। 100% गोपनीयता
+ ड्रैग एंड ड्रॉप समर्थन
+ तत्काल मर्जिंग
+ मोबाइल-अनुकूल UI  लाइव टूल: https://devlogic.store/mergepdf
+
+3. বাংলা (Bengali)
+# MergePDF
+— ক্লায়েন্ট-সাইড PDF মার্জারএকটি দ্রুত, নিরাপদ এবং বিজ্ঞাপন-মুক্ত টুল যা আপনার ব্রাউজারে সরাসরি একাধিক PDF ফাইল মার্জ করে।
+ReactJS দিয়ে তৈরি এবং সম্পূর্ণ ক্লায়েন্ট-সাইড — কোনও ব্যাকএন্ড নেই, কোনও আপলোড নেই, কোনও ডেটা স্টোরেজ নেই। 100% গোপনীয়তা
+ ড্র্যাগ অ্যান্ড ড্রপ সমর্থন
+ তাত্ক্ষণিক মার্জিং
+ মোবাইল-ফ্রেন্ডলি UI  লাইভ টুল: https://devlogic.store/mergepdf
+
